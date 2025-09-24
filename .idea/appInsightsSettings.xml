@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.hyperkani.gifs_app" />
+                  <option name="mobileSdkAppId" value="1:631069693452:android:7ce30be7879a9448134029" />
+                  <option name="projectId" value="gifs-app-4e7c0" />
+                  <option name="projectNumber" value="631069693452" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

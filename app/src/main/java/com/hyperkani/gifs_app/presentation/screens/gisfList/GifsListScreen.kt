@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -100,6 +101,13 @@ fun GifListScreenContent(
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(dimensionResource(id = R.dimen.average_padding))
         )
+        Button(
+            onClick = {
+                throw RuntimeException("Test Crash") // Force a crash
+            }
+        ) {
+            Text("Crash")
+        }
         when (gifState) {
             is UIState.Error -> {
                 GifLoadingErrorScreen(gifState, reload)
@@ -230,7 +238,7 @@ fun VideoListScreenPreview() {
                         Images(OriginalImage(""))
                     )
                 )
-            ), {}, {},{}
+            ), {}, {}, {}
         )
 
     }

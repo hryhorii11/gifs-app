@@ -2,6 +2,7 @@ package com.hyperkani.gifs_app.presentation.screens.gisfList
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.hyperkani.gifs_app.data.model.Gif
 import com.hyperkani.gifs_app.data.repository.GifsRepository
 import com.hyperkani.gifs_app.presentation.utils.UIState
@@ -13,7 +14,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class GifsViewModel @Inject constructor(
-    private val repository: GifsRepository
+    private val repository: GifsRepository,
+    private val crashlytics: FirebaseCrashlytics
 ) : ViewModel() {
 
 
@@ -26,6 +28,17 @@ class GifsViewModel @Inject constructor(
 
     init {
         setGifs()
+        logNonFatal()
+    }
+    fun logNonFatal() {
+        crashlytics.setCustomKey("action", "logNonFatal")
+        crashlytics.log("User pressed non-fatal button")
+        try {
+            // Штучна помилка, яку ми перехоплюємо
+            val x = 1 / 0
+        } catch (e: Throwable) {
+            crashlytics.recordException(IllegalStateException("Non-fatal demo exception", e))
+        }
     }
 
     fun setGifs() {

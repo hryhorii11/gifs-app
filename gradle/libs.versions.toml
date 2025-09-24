@@ -1,8 +1,8 @@
 [versions]
-agp = "8.5.1"
+agp = "8.11.1"
 coilGif = "2.6.0"
-kotlin = "1.9.0"
-coreKtx = "1.13.1"
+kotlin = "2.0.21"
+coreKtx = "1.17.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -17,6 +17,7 @@ hiltNavigationCompose = "1.2.0"
 hilt = "2.51.1"
 coilCompose = "2.1.0"
 composeMaterial = "1.4.0"
+firebaseCrashlyticsKtx = "20.0.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,9 +45,10 @@ hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt
 hilt-kapt = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 androidx-compose-material = { group = "androidx.wear.compose", name = "compose-material", version.ref = "composeMaterial" }
+firebase-crashlytics-ktx = { group = "com.google.firebase", name = "firebase-crashlytics-ktx", version.ref = "firebaseCrashlyticsKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

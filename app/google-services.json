@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "631069693452",
+    "project_id": "gifs-app-4e7c0",
+    "storage_bucket": "gifs-app-4e7c0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631069693452:android:7ce30be7879a9448134029",
+        "android_client_info": {
+          "package_name": "com.hyperkani.gifs_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCiMT8QBrCjuD2huAQoSIlXExb7JG0usA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
